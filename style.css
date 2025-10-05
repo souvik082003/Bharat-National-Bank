@@ -1,0 +1,105 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.brand-text {
+    color: #ea580c;
+}
+
+.brand-bg {
+    background-color: #ea580c;
+}
+
+.brand-bg-hover:hover {
+    background-color: #c2410c;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #334155;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.sidebar-link.active {
+    background-color: #fed7aa;
+    color: #c2410c;
+    font-weight: 600;
+}
+
+.tab-button {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: #475569;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    color: #ea580c;
+    border-bottom-color: #ea580c;
+}
+
+.quick-action-btn {
+    cursor: pointer;
+}
+
+.modal-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quick-transfer-card:hover {
+    animation: pulse 1s infinite;
+}
+
+.bill-category-card:hover,
+.service-card:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.quick-amount-btn.selected {
+    background-color: #fed7aa !important;
+    border-color: #ea580c !important;
+    color: #c2410c !important;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ea580c, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
