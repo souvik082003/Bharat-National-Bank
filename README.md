@@ -1,4 +1,4 @@
-git clone https://github.com/USERNAME/REPO.git
+
 <div align="center">
 
 # Bharat National Bank (Learning Banking System) 🏦🇮🇳
@@ -310,9 +310,9 @@ No explicit license file yet. Add one (MIT recommended) if you intend public col
 ## 📬 Contact
 | Channel | Value |
 |---------|-------|
-| Email | (work03.souvik@gmail.com) |
+| Email | work03.souvik@gmail.com |
 | GitHub | https://github.com/souvik082003 |
-| LinkedIn | (linkedin.com/in/souvik-samanta-660130211) |
+| LinkedIn | https://www.linkedin.com/in/souvik-samanta-660130211/ |
 
 Feel free to open Issues for bugs or feature ideas.
 
