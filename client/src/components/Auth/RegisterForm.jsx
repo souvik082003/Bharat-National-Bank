@@ -58,9 +58,7 @@ export default function RegisterForm({ onSwitchToLogin }) {
                     <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '200px', height: '200px', borderRadius: '50%', background: 'rgba(255,255,255,0.07)' }}></div>
                     <div style={{ position: 'relative', zIndex: 2 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '40px' }}>
-                            <div style={{ width: '48px', height: '48px', background: 'rgba(255,255,255,0.2)', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <svg width="24" height="24" fill="none" stroke="white" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" /></svg>
-                            </div>
+                            <img src="/logo.png" alt="BNB Logo" style={{ width: '48px', height: '48px', borderRadius: '14px', objectFit: 'cover' }} />
                             <div>
                                 <div style={{ fontSize: '20px', fontWeight: 800, color: 'white' }}>Bharat National</div>
                                 <div style={{ fontSize: '10px', fontWeight: 700, color: '#fed7aa', letterSpacing: '3px', textTransform: 'uppercase' }}>Bank</div>
@@ -95,7 +93,7 @@ export default function RegisterForm({ onSwitchToLogin }) {
                         {/* Step 0: Personal */}
                         {step === 0 && (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                                <div><label style={lbl}>Full Name *</label><input value={form.name} onChange={(e) => handleChange('name', e.target.value)} style={inputStyle} onFocus={focusIn} onBlur={focusOut} placeholder="John Doe" required /></div>
+                                <div><label style={lbl}>Full Name *</label><input value={form.name} onChange={(e) => handleChange('name', e.target.value)} style={inputStyle} onFocus={focusIn} onBlur={focusOut} placeholder="Enter your full name" required /></div>
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                                     <div><label style={lbl}>Date of Birth *</label><input type="date" value={form.dob} onChange={(e) => handleChange('dob', e.target.value)} style={inputStyle} onFocus={focusIn} onBlur={focusOut} required /></div>
                                     <div><label style={lbl}>Gender *</label><select value={form.gender} onChange={(e) => handleChange('gender', e.target.value)} style={{ ...inputStyle, cursor: 'pointer' }}><option>Male</option><option>Female</option><option>Other</option></select></div>

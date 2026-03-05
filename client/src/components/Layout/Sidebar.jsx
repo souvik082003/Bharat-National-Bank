@@ -28,9 +28,7 @@ export default function Sidebar({ isOpen, onClose }) {
                 {/* Logo */}
                 <div style={{ padding: '20px 20px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <div style={{ width: '42px', height: '42px', background: 'linear-gradient(135deg, #ea580c, #f97316)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(234,88,12,0.3)', flexShrink: 0 }}>
-                            <svg width="20" height="20" fill="none" stroke="white" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                        </div>
+                        <img src="/logo.png" alt="BNB Logo" style={{ width: '42px', height: '42px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(234,88,12,0.3)', flexShrink: 0, objectFit: 'cover' }} />
                         <div style={{ minWidth: 0 }}>
                             <h1 style={{ fontSize: '15px', fontWeight: 800, color: 'white', lineHeight: 1.2, margin: 0 }}>Bharat National</h1>
                             <p style={{ fontSize: '10px', fontWeight: 700, color: '#fb923c', letterSpacing: '2px', textTransform: 'uppercase', margin: 0 }}>Bank</p>

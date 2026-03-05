@@ -20,21 +20,7 @@ export default function LoginForm({ onSwitchToRegister }) {
         finally { setLoading(false); }
     };
 
-    const handleDemoLogin = async () => {
-        setError(''); setLoading(true);
-        try {
-            // First try to register the demo user (in case it doesn't exist)
-            await fetch('/api/register', {
-                method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: 'Demo User', email: 'demo@bharatbank.com', mobile_number: '9999999999', password: 'demo123', address: 'Mumbai, India' }),
-            });
-        } catch { } // Ignore if already exists
-        try {
-            const data = await loginUser('demo@bharatbank.com', 'demo123');
-            login(data.user);
-        } catch (err) { setError(err.message || 'Demo login failed. Please try again.'); }
-        finally { setLoading(false); }
-    };
+
 
     return (
         <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%)', padding: '20px' }}>
@@ -47,9 +33,7 @@ export default function LoginForm({ onSwitchToRegister }) {
 
                     <div style={{ position: 'relative', zIndex: 2 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '40px' }}>
-                            <div style={{ width: '48px', height: '48px', background: 'rgba(255,255,255,0.2)', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <svg width="24" height="24" fill="none" stroke="white" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                            </div>
+                            <img src="/logo.png" alt="BNB Logo" style={{ width: '48px', height: '48px', borderRadius: '14px', objectFit: 'cover' }} />
                             <div>
                                 <div style={{ fontSize: '20px', fontWeight: 800, color: 'white', letterSpacing: '-0.5px' }}>Bharat National</div>
                                 <div style={{ fontSize: '10px', fontWeight: 700, color: '#fed7aa', letterSpacing: '3px', textTransform: 'uppercase' }}>Bank</div>
@@ -72,14 +56,7 @@ export default function LoginForm({ onSwitchToRegister }) {
                                 <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>{item.text}</span>
                             </div>
                         ))}
-                        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '16px', marginTop: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <div style={{ display: 'flex' }}>
-                                {['#ea580c', '#16a34a', '#eab308', '#dc2626'].map((c, i) => (
-                                    <div key={i} style={{ width: '28px', height: '28px', borderRadius: '50%', background: c, border: '2px solid #7c2d12', marginLeft: i > 0 ? '-8px' : 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: 'white', fontWeight: 700 }}>{String.fromCharCode(65 + i)}</div>
-                                ))}
-                            </div>
-                            <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}><strong style={{ color: 'white' }}>10M+</strong> customers trust us</span>
-                        </div>
+
                     </div>
                 </div>
 
@@ -143,16 +120,7 @@ export default function LoginForm({ onSwitchToRegister }) {
                         </button>
                     </form>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px', margin: '24px 0' }}>
-                        <div style={{ flex: 1, height: '1px', background: '#e2e8f0' }}></div>
-                        <span style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 500 }}>or</span>
-                        <div style={{ flex: 1, height: '1px', background: '#e2e8f0' }}></div>
-                    </div>
 
-                    <button onClick={handleDemoLogin} disabled={loading}
-                        style={{ width: '100%', padding: '14px', background: '#fff7ed', color: '#9a3412', border: '2px solid #fed7aa', borderRadius: '14px', fontSize: '14px', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                        🚀 Try Demo Account
-                    </button>
 
                     <p style={{ textAlign: 'center', fontSize: '14px', color: '#94a3b8', marginTop: '28px' }}>
                         Don't have an account?{' '}
