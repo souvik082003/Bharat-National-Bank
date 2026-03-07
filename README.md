@@ -120,7 +120,7 @@ Bharat-National-Bank/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/FenixCode7/Bharat-National-Bank.git
+git clone https://github.com/souvik082003/Bharat-National-Bank.git
 cd Bharat-National-Bank
 ```
 
